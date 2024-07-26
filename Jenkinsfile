@@ -5,7 +5,7 @@ pipeline {
         stage('Drop the Apache HTTPD Docker container'){
             steps {
             echo 'droping the container...'
-            sh 'docker -f apache1'
+            sh 'docker rm -f apache1'
             }
         }
         stage('Create the Apache httpd container') {
